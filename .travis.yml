@@ -1,4 +1,7 @@
 language: node_js
 node_js:
-  - "iojs"
-  - "7"
+- iojs
+- '7'
+deploy:
+  api_key:
+    secure: m2zZHdQKGuRtFaeuIJyq7NWG6Vii2s+ZjO0LOxdZkaE+2J6LDPl1pMv/U9ejnF3dsjL7iJrvedU0g+Srpf/ECvNikCWCxenSmBfEtZ248D++Q+KdWqbnYY4W+OhpeGw/V3xwSTlK+55XkaAZAjpW8HGIQcqp4s/pWhlaIdI78b08HKZAiKXGs3fK7ap49tQiFD3cHA0iuxJIfCX1OX4dXgzvIVpwr9xTnKvTZXUEJq1jTdwOgGZTfAGxHUYX/EbaE01lN2qeuo/wu2i6c8H6SGqT3rUd4Trwf4zVIyHZ6glVN2n51wvdNY7RcaZ6uCI68sxag3oiBgsDbPkMr00vLm2doRw6HuH2Nz1VAAOj8fUQ61om1jUeiXveHvRjHxNph3oQGZU5C8z4N6BjcOkrqeQaSHik5vpGmpCKoQ3fyPzxMPWALp6CtIpiOUompEAV2XSTgzxBl94ntZDxXGbp/bIYio76fHCACImO4CInwe7gKqdorn2ctpPGhaxkvExgQv/mLJqL5ScF0WKOGSP1RD1DaX+kkc0JVhs9/PSqyW6aKwYsEXwgQ19pdAdA/O1hdO3Q0GBdsNxX0iSx/XVcC4LQyh/XTFCgev3J22u+h8miVH1zaRoJr5E0t4eVny9Flr2ngyU+v5aL9QDRmKba1r5WNzeQjPIAIEk0xRozjjc=
