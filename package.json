@@ -1,0 +1,12 @@
+{
+  "name": "star-wars-spa",
+  "version": "1.0.0",
+  "description": "SPA which displays info about various Star Wars characters",
+  "main": "server.js",
+  "repository": {
+    "url": "git@github.com:Scorpio750/star-wars-spa.git",
+    "type": "git"
+  },
+  "author": "Patrick Wu <scorpio7500@gmail.com>",
+  "license": "MIT"
+}
