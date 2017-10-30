@@ -8,5 +8,8 @@
     "type": "git"
   },
   "author": "Patrick Wu <scorpio7500@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@angular/cli": "latest"
+  }
 }
