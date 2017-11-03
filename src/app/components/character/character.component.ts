@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Character } from '../../models/Character';
 
 @Component({
-  selector: 'character',
+  selector: 'characters',
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.css']
 })
