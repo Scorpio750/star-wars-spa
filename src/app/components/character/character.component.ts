@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { Component, ElementRef } from '@angular/core';
 import { Character } from '../../models/Character';
 import { CharactersService } from '../../services/character.service';
 
@@ -11,10 +10,9 @@ import { CharactersService } from '../../services/character.service';
 export class CharacterComponent {
     selectedCharacter: Character;
     characters: Character[];
-    private http: Http;
-    
-    constructor(private charactersService: CharactersService, http: Http) { 
-        this.http = http;
+    charMovies: object;
+
+    constructor(private charactersService: CharactersService) {
     }
 
     // onInit lifecycle hook
@@ -25,15 +23,17 @@ export class CharacterComponent {
         this.charactersService.getCharacters()
             .then((characters: Character[]) => this.characters = characters);
     }
-    getMovies(url: string) {
-        return this.http.get(url)
-    }
     onSelect(selectedCharacter): void {
         if (this.selectedCharacter === selectedCharacter) {
             this.selectedCharacter = undefined;
             return
         }
         this.selectedCharacter = selectedCharacter;
-       console.log(this.getMovies(this.selectedCharacter.url));
+
+        this.charactersService.getMovies(this.selectedCharacter.url)
+            .subscribe((res: any) => {
+                this.charMovies = res.json();
+                console.log(this.charMovies);
+        });
     }
 }
