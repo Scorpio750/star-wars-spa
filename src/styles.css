@@ -38,4 +38,5 @@ header {
 
 app-root {
     flex: 10 1 80%;
+    width: 100%;
 }

@@ -2,7 +2,9 @@
   <li *ngFor="let character of characters"
     [class.selected]="character === selectedCharacter"
     (click)="OnSelect(character)">
-    <img src="{{character.imgUrl}}" alt="">
+    <div class="img-container">
+      <img src="{{character.imgUrl}}" alt="">
+    </div>
     <h2>{{character.name}}</h2>
   </li>
 </ul>
