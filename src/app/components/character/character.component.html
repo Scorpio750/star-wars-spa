@@ -6,9 +6,9 @@
       <img src="{{character.imgUrl}}" alt="">
     </div>
     <h2>{{character.name}}</h2>
-    <ul>
+    <ul id="movie-list">
       <li *ngFor="let movie of character.movies">
-        {{movie}}
+        <span class="movie">{{movie}}</span>
       </li>
     </ul>
   </li>
