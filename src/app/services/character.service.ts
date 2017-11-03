@@ -12,9 +12,16 @@ export class CharactersService {
 	getCharacters(): Promise<Character[]> {
 		return Promise.resolve(CHARACTERS)
 	}
-	getMovies(url: string) {
+	getMovieEndpoints(url: string): Promise<string[]>{
 		return this.http.get(url)
+						.toPromise()
+						.then(res => res.json()['films'] as string[])
+						.catch(this.handleError);
 	}
 
+    private handleError(error: any): Promise<any> {
+        alert('An error occurred' + error); // for demo purposes only
+        return Promise.reject(error.message || error);
+      }
+
 }
- 
