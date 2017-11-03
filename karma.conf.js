@@ -38,6 +38,10 @@ module.exports = function (config) {
 				flags: ['--no-sandbox']
 			}
 		},
+
+        // Continuous Integration mode
+        // if true, it capture browsers, run tests and exit
+        singleRun: true
 	};
 
 	if(process.env.TRAVIS){
