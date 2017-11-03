@@ -1,0 +1,11 @@
+ul {
+    display: flex;
+    flex-flow: row;
+    max-width: 100%;
+    list-style: none;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}

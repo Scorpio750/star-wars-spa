@@ -1,18 +1,14 @@
 language: node_js
 node_js:
-  - "node"
-
-# fix for Karma Chrome Launcher
+- node
 before_install:
-  - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-
-# Heroku integration
+- export CHROME_BIN=chromium-browser
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 deploy:
   provider: heroku
   api_key:
-    secure: bIKlvxeZ+W5377ObFfXNp972a70GQDEswZ3yie34e8J+PqhqTacgWEadHpdfjoB0ahrZyEiF34moLD11WJV52WrbILVBwxastEW7MgopROqSElsGyFutDqfzLZmvGQnwz+FFWwjkC2P/0pZQ6kQ6HPS2hgex+qBfEeclwxIL6VhX5yoPR5Ssmbl0O8uMN7yxD4EvBAx0OgyBORC/YDiKP/OkIgEhA4ksS0j3st83papCXSu3xxoVllfhn8BncwvLBg2cBr3YFhT/kTdhEGt6d8gs8ypyqhZ1jQKacRF4IlnAxNLc8REaTkzFyWYnNNG1jT1Ai9eyxzGaOjbiSFHToAnr98Bh/UkbgmPcb3sDvb/9ZJE1lGAV0mynluobBhbQuJlOAjnCsJTSxs8alzsVvG4uooQ7Ndi/I8NGHrfW0/GOTxVg9Ocy7gwoPZjIRm7Ll4fVOHGKm1MFOKn/6kRgm9MwC/KOzx/eTnHBTrLGA19NBcRWcsSMLMBP14ixZSx5nhc3Qw7bgDHvWeVwHwaS1bbdal8XQQOCQ9mjzuZAuN6tteH/0nhjprbkOM8MNvgQBqn0mODERTlcuPwz89feCtvPL25Iq7mi1+SBiDT/UdrUOEFwQMzXEoEmC9SFH8cgPv7VN0NJegWtmRBKD8OX1C1XblcX2lEWtoRMSPh7lz0=
+    secure: nCU7PsawZ0F+JLzTpF2eh7A+ZuZvT4XsCZP+nyfSk70HE7NKLBAOaENfOtyfi3rUD2ENGbln+d/VbwQrKnGQTf6UFSXxif0Ac+cGhHRrCIX6cyhfrE4Cvn8/G6t5Fe4Q9rNUNDYPfLOCzAZUUNkbTxgIJuVVt6HAtqW965hurslHgNAXo9AK7y67pSuDiU+J6/0Pq2xlIQQhgCiI/SfKhe/K/+Hed+f5rQxcBqRx8KtCzwuqhGYXw+TAGUnxkfAOQFSCCmT1afRmqZi0AQaboxELXMpRtLyzhGPVQP1SKd0UNnAazmGod33gbUKES3UsLUgOne1VZ6cap8UMIvwcd1qdKwWzvQ7A1HbPGemEDmgEDoGAleq5u5INuiw6GSZKILvnl3bcNFM9kTyYQQBtrhhYcPtCbzGzIXTkf4/2LzJMoMyTpqQcTnRCki9u9ALtGP3HCWJLAKVNY8cee4GlqIKNxO6TSwHQkOUGpUsDxxOJ761AB6lLqdKD99AknmI5VQNqjk9UjqYeXfugmA3hWBYf+RP8iXJIYkdZWic9Cmcm6UDfC2OP1wG8EbTtprRILzJW/Qxyau0ukqBLWR4AelE2XbHVgPR1Dpb8MJrRE3DooiBi0VvjXLrPtcsovSsFpHQ1cFtrtj6nJZTN1lgHjn94Wt0P+IYGghR+jYsjT3o=
   app: star-wars-spa
   on:
     repo: Scorpio750/star-wars-spa
