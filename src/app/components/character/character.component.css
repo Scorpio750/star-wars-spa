@@ -17,7 +17,6 @@ li {
 }
 li:hover {
     opacity: 1;
-    transform: scale(1.01);
 }
 
 .img-container {
@@ -30,4 +29,8 @@ img {
 
 h2 {
     /* font-size: 2em; */
+}
+
+.selected {
+    transform: scale(1.1);
 }
