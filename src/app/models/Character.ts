@@ -1,5 +1,5 @@
 export class Character {
     name: string
-    imageUrl: string
+    imgUrl: string
     url: string
 }
