@@ -1,1 +1,1 @@
-web: ng build --aot && node server.js
+web: node server.js
