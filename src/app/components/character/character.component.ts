@@ -10,7 +10,8 @@ import { CharactersService } from '../../services/character.service';
 export class CharacterComponent {
   selectedCharacter: Character;
   characters: Character[];
-  constructor(private charactersService: CharactersService) { }
+  private charactersService: CharactersService;
+  constructor(charactersService) { }
 
   // onInit lifecycle hook
   ngOnInit(): void {
@@ -26,5 +27,8 @@ export class CharacterComponent {
           return
       }
       this.selectedCharacter = selectedCharacter;
+      const movieInfo = this.charactersService
+        .getMovies(this.selectedCharacter.url);
+      console.log(movieInfo);
   }
 }
