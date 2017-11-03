@@ -1142,6 +1142,16 @@ function flattenUnsubscriptionErrors(errors) {
 
 /***/ }),
 
+/***/ "../../../../rxjs/_esm5/add/operator/toPromise.js":
+/***/ (function(module, exports) {
+
+// HACK: does nothing, because `toPromise` now lives on the `Observable` itself.
+// leaving this module here to prevent breakage.
+//# sourceMappingURL=toPromise.js.map 
+
+
+/***/ }),
+
 /***/ "../../../../rxjs/_esm5/observable/ArrayObservable.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

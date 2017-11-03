@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './components/app.component';
 import { CharacterComponent } from './components/character/character.component';
-import { CharactersService } from './services/character.service';
+import { CharacterService } from './services/character.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { CharactersService } from './services/character.service';
     BrowserModule,
     HttpModule
   ],
-  providers: [CharactersService],
+  providers: [CharacterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

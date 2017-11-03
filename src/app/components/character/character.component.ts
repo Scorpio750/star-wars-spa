@@ -2,7 +2,7 @@ import { Component, ElementRef } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { Character } from '../../models/Character';
-import { CharactersService } from '../../services/character.service';
+import { CharacterService } from '../../services/character.service';
 
 @Component({
     selector: 'characters',
@@ -12,10 +12,11 @@ import { CharactersService } from '../../services/character.service';
 export class CharacterComponent {
     selectedCharacter: Character;
     characters: Character[];
-    charMovies: object;
+    movieLinks: string[];
+    movieList: string[];
     private http: Http;
 
-    constructor(private charactersService: CharactersService, http: Http) {
+    constructor(private characterService: CharacterService, http: Http) {
         this.http = http;
     }
 
@@ -25,31 +26,48 @@ export class CharacterComponent {
     }
 
     getCharacters(): void {
-        this.charactersService.getCharacters()
+        this.characterService.getCharacters()
             .then((characters: Character[]) => this.characters = characters);
     }
 
     onSelect(selectedCharacter): void {
+        // clear previously selected character's movies
+        if (this.selectedCharacter) {
+            this.selectedCharacter.movies = [];
+        }
+
         if (this.selectedCharacter === selectedCharacter) {
             this.selectedCharacter = undefined;
             return
         }
         this.selectedCharacter = selectedCharacter;
 
-        this.charactersService.getMovies(this.selectedCharacter.url)
-            .subscribe(
-                (res: any) => {
-                    selectedCharacter.movies = res.json()['films'];
-                    console.log(this.charMovies);
-                },
-                (err: any) => {
-                    console.log(err);
-                });
+        this.characterService
+                .getMovieEndpoints(this.selectedCharacter.url)
+                .then((movieLinks: string[]) => { 
+                    this.parseMovieEndpoints(movieLinks);
+                })
+
+        // .subscribe(
+        //     (res: any) => {
+        //         selectedCharacter.movies = res.json()['films'];
+        //         console.log(this.movieList);
+        //     },
+        //     (err: any) => {
+        //         console.log(err);
+        //     });
     }
+    parseMovieEndpoints(movieLinks: string[]): void  {
+        for (const link of movieLinks) {
+            this.characterService
+                .getMovie(link)
+                .then((res) => { 
+                    // parse title and release date
+                    const movieData = 'Title:\t' + res['title'] + '\nRelease Date:\t' + res['release_date']
+                    this.selectedCharacter.movies.push(movieData);
+                });
+        }
 
-    private handleError(error: any): Promise<any> {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
-      }
-
+        console.log(this.selectedCharacter.movies);
+    }
 }
