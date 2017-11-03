@@ -1,7 +1,7 @@
 <ul id="char-list">
   <li *ngFor="let character of characters"
     [class.selected]="character === selectedCharacter"
-    (click)="OnSelect(character)">
+    (click)="onSelect(character)">
     <div class="img-container">
       <img src="{{character.imgUrl}}" alt="">
     </div>
