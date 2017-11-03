@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Character } from '../../models/Character';
 import { CharactersService } from '../../services/character.service';
 
@@ -7,7 +7,7 @@ import { CharactersService } from '../../services/character.service';
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.css']
 })
-export class CharacterComponent implements OnInit {
+export class CharacterComponent {
   selectedCharacter: Character;
   characters: Character[];
   constructor(private charactersService: CharactersService) { }

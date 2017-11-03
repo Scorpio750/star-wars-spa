@@ -1,4 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
+import { Component } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CharacterComponent } from './character/character.component';
 describe('AppComponent', () => {
@@ -6,9 +7,9 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        CharacterComponent
+        MockCharacterComponent
       ],
-    }).compileComponents();
+    });
   }));
   it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -16,3 +17,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 });
+
+// mock character component
+@Component({
+  selector: 'characters',
+  template: ''
+})
+class MockCharacterComponent {
+}
