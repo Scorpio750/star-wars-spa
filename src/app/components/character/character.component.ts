@@ -31,7 +31,9 @@ export class CharacterComponent {
     }
 
     onSelect(selectedCharacter): void {
+
         // clear previously selected character's movies
+        this.movieLinks = [];
         if (this.selectedCharacter) {
             this.selectedCharacter.movies = [];
         }
@@ -43,19 +45,10 @@ export class CharacterComponent {
         this.selectedCharacter = selectedCharacter;
 
         this.characterService
-                .getMovieEndpoints(this.selectedCharacter.url)
-                .then((movieLinks: string[]) => { 
-                    this.parseMovieEndpoints(movieLinks);
-                })
-
-        // .subscribe(
-        //     (res: any) => {
-        //         selectedCharacter.movies = res.json()['films'];
-        //         console.log(this.movieList);
-        //     },
-        //     (err: any) => {
-        //         console.log(err);
-        //     });
+            .getMovieEndpoints(this.selectedCharacter.url)
+            .then((movieLinks: string[]) => { 
+                this.parseMovieEndpoints(movieLinks);
+            });
     }
     parseMovieEndpoints(movieLinks: string[]): void  {
         for (const link of movieLinks) {
@@ -63,11 +56,10 @@ export class CharacterComponent {
                 .getMovie(link)
                 .then((res) => { 
                     // parse title and release date
-                    const movieData = 'Title:\t' + res['title'] + '\nRelease Date:\t' + res['release_date']
-                    this.selectedCharacter.movies.push(movieData);
+                    const movieData = 'Title:\t' + res['title'] + ' | Release Date:\t' + res['release_date']
+                    this.movieLinks.push(movieData);
                 });
         }
-
-        console.log(this.selectedCharacter.movies);
+        this.selectedCharacter.movies = this.movieLinks;
     }
 }
