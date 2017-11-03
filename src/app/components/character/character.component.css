@@ -1,0 +1,33 @@
+ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    padding: 1em 0;
+}
+
+li {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    transition: 0.4s all ease-in-out;
+}
+li:hover {
+    opacity: 1;
+    transform: scale(1.01);
+}
+
+.img-container {
+    cursor: pointer;
+}
+
+img {
+    width: 16vw;
+}
+
+h2 {
+    /* font-size: 2em; */
+}
