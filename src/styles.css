@@ -13,10 +13,7 @@ html {
 }
 
 body {
-    background-color: black;
-    /* color: chartreuse;
-    font-family: monospace;
-    font-weight: 100; */
+    background-image: url("https://www.jpl.nasa.gov/assets/images/content/tmp/home/missions_bg_image.jpg");
     color: black;
     font-family: 'Star Jedi Outline', 'Distant Galaxy';
     text-shadow: -1px 0 gold, 0 1px gold, 1px 0 gold, 0 -1px gold;
@@ -32,8 +29,8 @@ header {
     text-shadow: -1px 0 gold, 0 1px gold, 1px 0 black, 0 -1px black;
     border: 1px solid gold;
     border-radius: 1em;
-    width: 50vw;
-    font-size: 8vw;
+    width: 32vw;
+    font-size: 5vw;
     cursor: default;
 }
 
