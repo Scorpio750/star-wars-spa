@@ -56,7 +56,7 @@ export class CharacterComponent {
                 .getMovie(link)
                 .then((res) => { 
                     // parse title and release date
-                    const movieData = 'Title:\t' + res['title'] + ' | Release Date:\t' + res['release_date']
+                    const movieData = 'Title:\t' + res['title'] + ' | Release Date:\t' + new Date(res['release_date']).toDateString();
                     this.movieLinks.push(movieData);
                 });
         }

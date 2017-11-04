@@ -1,9 +1,10 @@
 <ul id="char-list">
   <li *ngFor="let character of characters"
-    [class.selected]="character === selectedCharacter"
-    (click)="onSelect(character)">
+    [class.selected]="character === selectedCharacter">
     <div class="img-container">
-      <img src="{{character.imgUrl}}" alt="">
+      <img src="{{character.imgUrl}}"
+        (click)="onSelect(character)"
+        alt="">
     </div>
     <h2>{{character.name}}</h2>
     <ul id="movie-list">

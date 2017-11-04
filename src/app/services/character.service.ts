@@ -25,7 +25,6 @@ export class CharacterService {
 	}
     private handleError(error: any): Promise<any> {
 		alert('Sorry, we couldn\'t retrieve movie data for that character.');
-        console.error('An error occurred' + error); // for demo purposes only
         return Promise.reject(error.message || error);
 	}
 
