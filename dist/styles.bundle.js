@@ -7,13 +7,6 @@ module.exports = __webpack_require__.p + "DISTGRG_.db8e65588f4fd8bc58d7.ttf";
 
 /***/ }),
 
-/***/ "../../../../../src/assets/fonts/Starjout.ttf":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "Starjout.eabe4d47369871a62f7c.ttf";
-
-/***/ }),
-
 /***/ "../../../../../src/styles.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49,7 +42,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "@font-face {\n    font-family: 'Star Jedi Outline';\n    src: url(" + __webpack_require__("../../../../../src/assets/fonts/Starjout.ttf") + ") format('truetype');\n}\n@font-face {\n    font-family: 'Distant Galaxy';\n    src: url(" + __webpack_require__("../../../../../src/assets/fonts/DISTGRG_.ttf") + ") format('truetype');\n}\nhtml {\n    box-sizing: border-box;\n    text-align: center;\n    height: 100vh;\n}\n\nbody {\n    background-image: url(\"https://www.jpl.nasa.gov/assets/images/content/tmp/home/missions_bg_image.jpg\");\n    background-size: cover;\n    color: black;\n    font-family: 'Star Jedi Outline', 'Distant Galaxy';\n    text-shadow: -1px 0 gold, 0 1px gold, 1px 0 gold, 0 -1px gold;\n    height: 100vh;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column nowrap;\n            flex-flow: column nowrap;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n\nheader {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 10%;\n            flex: 1 1 10%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    text-shadow: -1px 0 gold, 0 1px gold, 1px 0 black, 0 -1px black;\n    border: 1px solid gold;\n    border-radius: 1em;\n    font-size: 13vh;\n    cursor: default;\n    padding: .5rem;\n}\n\napp-root {\n    -webkit-box-flex: 10;\n        -ms-flex: 10 1 80%;\n            flex: 10 1 80%;\n    width: 100%;\n}", ""]);
+exports.push([module.i, "@font-face {\n    font-family: 'Distant Galaxy';\n    src: url(" + __webpack_require__("../../../../../src/assets/fonts/DISTGRG_.ttf") + ") format('truetype');\n}\nhtml {\n    box-sizing: border-box;\n    text-align: center;\n    height: 100vh;\n}\n\nbody {\n    background-image: url(\"https://www.jpl.nasa.gov/assets/images/content/tmp/home/missions_bg_image.jpg\");\n    background-size: cover;\n    color: black;\n    font-family: 'Distant Galaxy';\n    text-shadow: -1px 0 gold, 0 1px gold, 1px 0 gold, 0 -1px gold;\n    height: 100vh;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column nowrap;\n            flex-flow: column nowrap;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n\nheader {\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 10%;\n            flex: 1 1 10%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    text-shadow: -1px 0 gold, 0 1px gold, 1px 0 black, 0 -1px black;\n    border: 1px solid gold;\n    border-radius: 1em;\n    font-size: 13vh;\n    cursor: default;\n    padding: .5rem;\n}\n\napp-root {\n    -webkit-box-flex: 10;\n        -ms-flex: 10 1 80%;\n            flex: 10 1 80%;\n    width: 100%;\n}", ""]);
 
 // exports
 
